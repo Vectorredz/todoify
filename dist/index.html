@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/x-icon" href="/todoify/Todo list.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>todoify</title>
+  <script type="module" crossorigin src="/todoify/assets/main-d4pVmZuR.js"></script>
+  <link rel="stylesheet" crossorigin href="/todoify/assets/main-Cf1penGL.css">
+</head>
+
+<body class="bg-[#161616]">
+  <nav class="navBar z-100">
+    <ul class="">
+      <li class="navItem bg-[rgb(0,0,0,0.2)] border-b-1 border-accent-1">
+        <div class="flex flex-row items-center gap-3">
+          <img src="/todoify/Todo list.png" class="size-10" alt="" />
+          <h1 class="font-[500]">todoify</h1>
+        </div>
+      </li>
+      <li class="navItem">
+        <div class="flex flex-row gap-2 items-center">
+          <i class="ri-user-3-line logo"></i>
+          <button class="button nav-primary-button" id="profile">
+            Profile
+          </button>
+          <span class="w-fit border-2 border-accent-1 rounded-3xl p-2 text-[12px]">Coming soon</span>
+        </div>
+      </li>
+      <!-- Project Events -->
+      <li class="navItem">
+        <div class="flex flex-row place-content-between">
+          <div class="flex flex-row gap-2">
+            <i class="ri-folders-line logo"></i>
+            <button class="button nav-primary-button" id="my-projects">
+              My Projects
+            </button>
+          </div>
+          <span class="gap-2">
+            <dialog id="dialog-project" class="dialog-project">
+              <form action="" method="dialog" id="form-dialog-project" class="flex flex-col p-5 h-full justify-center">
+                <p class="p-2">
+                  Note: For whitespaces please input either "-" or "_" (e.g.,
+                  Project-1)
+                </p>
+                <input type="text" class="dialog-project-input" name="project-name" id="project-name"
+                  placeholder="Enter Project Name" />
+                <!-- <p class="p-4 py-6 font-bold text-center text-lg text-[red] hidden"  id="warning-name">Project name is already taken.</p> -->
+                <div class="dialog-buttons">
+                  <button type="button" class="button dialog-btn-remove" id="return-project">
+                    Back
+                  </button>
+                   <button type="submit" class="button dialog-btn-add" id="add-project-name">
+                    <i class="ri-folder-add-line"></i>
+                    Enter
+                  </button>
+                </div>
+              </form>
+            </dialog>
+            <button class="button" id="add-project">
+              <i class="ri-folder-add-line logo"></i>
+            </button>
+            <dialog id="dialog-empty-project" class="dialog-project items-center justify-center">
+              <form action="" method="dialog" id="form-dialog-remove-project" class="m-2">
+                <p class="p-4 text-[red] font-bold text-3xl text-center">
+                  Are you sure you want to remove all your projects?
+                </p>
+                <p class="p-4 text-center mb-10">
+                  Note: Once you remove a project it cannot be recovered.
+                </p>
+                <div class="dialog-buttons">
+                  <button class="button dialog-btn-remove" id="cancel-empty-project">Cancel</button>
+                  <button type="submit" class="button dialog-btn-add" id="confirm-empty-project">
+                    <i class="ri-delete-bin-6-line logo"></i>
+                    Confirm
+                  </button>
+                </div>
+              </form>
+            </dialog>
+            <button class="button" id="empty-project">
+              <i class="ri-delete-bin-6-line logo"></i>
+            </button>
+          </span>
+        </div>
+        <!-- List of projects -->
+        <div class="">
+          <ul class="project-list" id="project-list"></ul>
+        </div>
+      </li>
+      <!-- Settings Events -->
+      <li class="navItem">
+        <div class="flex flex-row gap-2 items-center">
+          <i class="ri-settings-4-line logo"></i>
+          <button class="button nav-primary-button" id="settings">
+            Settings
+          </button>
+          <span class="w-fit border-2 border-accent-1 rounded-3xl p-2 text-[12px]">Coming soon</span>
+        </div>
+      </li>
+    </ul>
+  </nav>
+  <!-- Task Events -->
+  <main class="w-full">
+    <div
+      class="flex flex-col justify-center absolute z-0 h-full w-full text-9xl font-host-grotesk font-[900] p-20 gap-10">
+      <p>What will you todoify?</p>
+      <div class="flex flex-row gap-20">
+        <span class="bg-linear-to-r from-green-500 via -accent-1 to-green-300 size-40 rounded-full"></span>
+        <span class="bg-linear-to-r from-green-500 via -accent-1 to-green-300 size-40 rounded-full w-250"></span>
+      </div>
+    </div>
+    <section id="task-space" class="task-space z-10 relative"></section>
+  </main>
+</body>
+
+</html>
