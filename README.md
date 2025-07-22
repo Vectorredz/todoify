@@ -1,4 +1,4 @@
-# The Odin Project
+# The Odin Project # 6
 ## Custom To-do list 
 
 *todoify* is a customizable to-do app that goes beyond checklists. it syncs your tasks and projects with music from your spotify playlist that matches your mood, energy, or focus level. 
