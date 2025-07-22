@@ -11,7 +11,7 @@
 - Link a specific song with a task/project depending on urgency
 - Embed a spotify player
 
-![alt text](image-1.png)
+![alt text](public/image-1.png)
 
 ## Get started
 
