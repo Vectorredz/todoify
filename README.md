@@ -10,6 +10,7 @@
 - Backend (currently just makes use of localStorage -> saves and loads even closed)
 - Link a specific song with a task/project depending on urgency
 - Embed a spotify player
+- Migrate to typescript and to react (once learned)
 
 ![alt text](public/image-1.png)
 
