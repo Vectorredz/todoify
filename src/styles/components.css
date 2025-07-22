@@ -1,0 +1,223 @@
+@import "tailwindcss";
+
+@layer components {
+  .button {
+    @apply text-(--color-white) font-host-grotesk 
+  }
+
+  .logo {
+    @apply text-white text-xl   pl-2
+  }
+
+  .priority-urgent-btn,
+  .priority-important-btn,
+  .priority-optional-btn
+   {
+    @apply text-(--color-white) p-3 w-30 font-host-grotesk rounded-4xl bg-black
+  }
+
+  .priority-urgent-btn:hover, 
+  .priority-important-btn:hover,
+  .priority-optional-btn:hover {
+    @apply bg-grey
+  }
+
+  .priority-urgent-btn-selected {
+    @apply text-[red] font-black
+  }
+
+  .priority-important-btn-selected {
+    @apply text-[#ffd631] font-black
+  }
+
+  .priority-optional-btn-selected {
+    @apply text-[#35b2ef] font-black
+  }
+
+  .priority-buttons {
+    @apply flex flex-row gap-4
+  }
+
+  .navBar {
+    @apply bg-black-transparent text-(--color-white) min-w-100 overflow-x-auto sticky left-0 backdrop-blur-xs 
+  }
+
+  .nav-primary-button {
+     @apply font-[600] text-xl
+  }
+
+  .navItem {
+    @apply p-7
+  }
+
+  .project-list {
+    @apply flex flex-col gap-2 min-h-100 bg-[rgb(0,0,0,0.3)] p-3 mt-2 rounded-2xl
+  }
+
+  .project-item {
+    @apply flex flex-row text-lg font-host-grotesk place-content-between
+  }
+
+  .project-item:hover {
+    @apply bg-black duration-200 ease-in-out rounded-2xl
+  }
+
+  .project-item:focus {
+    @apply bg-accent-1 text-white duration-100 ease-in-out rounded-2xl
+  
+  }
+
+  .project-item-label-selected {
+    @apply text-accent-1 duration-100 ease-in-out font-[900]
+  }
+
+  .project-item-selected {
+    @apply bg-accent-1 rounded-2xl
+  }
+  
+  .remove-project-item-btn-logo {
+    @apply text-xl p-4
+  }
+
+  .remove-project-item-btn-logo:hover {
+    @apply text-xl text-[red]
+  }
+
+  .task-space {
+     @apply flex flex-row m-7 gap-6 
+  }
+
+  .task-container {
+    @apply min-w-100 min-h-180 bg-black-transparent rounded-2xl text-white font-host-grotesk gap-2 p-5 backdrop-blur-md
+  }
+
+  .task-list-nav {
+    @apply flex flex-row place-content-between
+  }
+
+  .task-input {
+    @apply min-w-77 min-h-10 border-1 p-3 border-[rgb(255,255,255,0.5)] rounded-xl bg-grey caret-accent-1
+  }
+
+  .task-input:focus {
+    @apply border-2 outline-0 border-accent-1
+  }
+
+  .task-list {
+    @apply flex flex-col min-w-[80] min-h-150 p-4 my-4 rounded-2xl bg-[rgb(0,0,0,0.3)] gap-2
+  }
+
+  .task-item {
+    @apply flex flex-row items-center p-2 place-content-between text-left 
+  }
+
+  .task-item-selected {
+    @apply bg-grey duration-200 ease-in-out rounded-2xl p-3
+  }
+
+  .task-item:hover {
+    @apply bg-black duration-100 ease-in-out rounded-2xl p-3
+  }
+
+  .task-item:focus {
+    @apply bg-grey duration-200 ease-in-out rounded-2xl p-3
+  }
+
+  .task-item-sub-cont {
+     @apply flex flex-row gap-4 items-center
+  }
+
+  .task-done-btn {
+    @apply rounded-full border-2  w-5 h-5 
+  }
+
+  .task-done-btn:focus {
+    @apply rounded-full border-2  w-5 h-5 
+  }
+
+  .task-remove-btn {
+    @apply visible 
+  }
+
+  .task-card {
+    @apply flex flex-col w-200 min-h-120 bg-black-transparent rounded-2xl p-5 text-white font-host-grotesk gap-5 backdrop-blur-lg
+  }
+
+  .task-card-label {
+    @apply text-4xl
+  }
+
+  .task-card-sub-nav {
+    @apply flex flex-row gap-2 items-center
+  }
+
+  .task-specifics-container {
+    @apply flex flex-row place-content-between py-4
+  }
+
+  .task-note-container {
+    @apply flex flex-col gap-2
+  }
+
+  .task-note {
+    @apply rounded-2xl p-4 min-h-120 bg-black border-1 border-[rgb(255,255,255,0.3)]
+  }
+
+  .task-status-badge {
+    @apply bg-grey rounded-full min-w-27 text-sm text-white text-center p-2
+  }
+
+  .task-note:focus {
+    @apply outline-0 border-2 border-accent-1
+  }
+
+  .dialog-project {
+    @apply rounded-2xl h-80 w-200 bg-black border-1 border-[rgb(255,255,255,0.2)] p-5 m-auto font-host-grotesk
+  }
+
+  .dialog-project::backdrop {
+    @apply duration-100 ease-in-out backdrop-blur-xs 
+  }
+
+  .dialog-project-input {
+    @apply min-h-20 text-3xl p-4 border-1 border-[rgb(255,255,255,0.5)] rounded-xl 
+  }
+
+  .dialog-project-input:focus {
+    @apply outline-0 border-2 border-accent-1 caret-accent-1
+  }
+
+  .dialog-buttons {
+    @apply flex flex-row items-end place-content-between h-full
+  }
+
+  .dialog-btn-add, .dialog-btn-remove  {
+    @apply rounded-4xl bg-grey p-5 w-50 text-xl
+  }
+
+  .dialog-btn-add:hover {
+    @apply bg-accent-1 duration-100 ease-in-out
+  }
+
+  .dialog-btn-add:active {
+    @apply bg-accent-1 font-bold filter brightness-80
+  }
+
+  .dialog-btn-remove:hover {
+    @apply bg-[red] duration-100 ease-in-out
+  }
+
+  .dialog-btn-remove:active {
+    @apply bg-[red] duration-100 brightness-80 ease-in-out font-bold
+  }
+
+
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
