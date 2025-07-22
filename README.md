@@ -1,11 +1,13 @@
 # The Odin Project
 ## Custom To-do list 
 
-*todoify* is a customizable to-do app that goes beyond checklists. it syncs your tasks and projects with music from your spotify playlist that matches your mood, energy, or focus level.
+*todoify* is a customizable to-do app that goes beyond checklists. it syncs your tasks and projects with music from your spotify playlist that matches your mood, energy, or focus level. 
 
 ### To be added (Hopefully):
 
 - Integrate with Spotify web api 
+- Login with spotify account (0Auth2)
+- Backend (currently just makes use of localStorage -> saves and loads even closed)
 - Link a specific song with a task/project depending on urgency
 - Embed a spotify player
 
